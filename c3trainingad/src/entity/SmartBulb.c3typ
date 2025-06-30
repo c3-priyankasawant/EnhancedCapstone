@@ -1,0 +1,58 @@
+/** 
+* SmartBulb.c3typ
+* A single {@link SmartBulb}.
+*/
+extendable entity type SmartBulb mixes FeatureEvaluatable{
+    /**
+     * The bulb type for this bulb.
+     */ 
+    bulbType: string enum('CFL', 'LED', 'INCAN')
+    
+    /**
+     * The light bulb's wattage.
+     */ 
+    wattage: !decimal 
+    
+    /**
+     * The name of this bulb's manufacturer.
+     */  
+    manufacturer: Manufacturer
+    
+    /**
+     * The time at which this bulb was manufactured.
+     */ 
+    startDate: !datetime
+
+    // collection for  {@link SmartBulbToFixtureRelationship}s for this bulb
+    @db(order='descending(start)')
+    fixtureHistory: [SmartBulbToFixtureRelation](from)
+
+    /**
+     * The fixture that this bulb is currently connected to.
+     */
+    currentFixture: Fixture stored calc fixtureHistory[0].(end == null).to
+
+
+    // bulb measurements
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+
+    lifeSpanInYears: member function(): double js-server 
+    
+
+    // The average temperature of this bulb in a given month
+    averageTemperatureMonth: member function(endDate: datetime): double js-server
+
+    /**
+    * Returns the average lifespan of a {@link SmartBulb}
+    */
+    averageLifeSpan: function(): double js-server 
+
+     /**
+    * Returns the shortestLifeSpan lifespan of a {@link SmartBulb}
+    */
+    shortestLifeSpan: function(): map<string, double> js-server 
+
+
+    monthlyBill: abstract member function(month: int, year: int): double js-server
+
+}

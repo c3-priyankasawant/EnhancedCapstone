@@ -1,0 +1,8 @@
+{
+    "id": "AverageLumens_SmartBulb",
+    "name": "AverageLumens",
+    "description": "Calculates the average lumens of the smart bulb based on sensor data.",
+    "srcType": "SmartBulb",
+    "path": "bulbMeasurements",
+    "expression": "avg(avg(normalized.data.lumens))"
+}

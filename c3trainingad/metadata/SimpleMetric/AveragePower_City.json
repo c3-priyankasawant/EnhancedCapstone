@@ -1,0 +1,13 @@
+{
+    "id": "AveragePower_City",
+    "name": "AveragePower",
+    "description": "Calculates the average power of the city based on sensor data.",
+    "srcType": "City",
+    "path": "buildings.apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.power))",
+    "cache": {
+        "intervals": ["MONTH"],
+        "monthsInPast": 1,
+        "monthsInFuture": 1
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "FixtureSource",
+  "source": "SourceFixture",
+  "sourceSystem": {
+    "name": "Canonical"
+  }
+}

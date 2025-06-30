@@ -1,0 +1,18 @@
+{
+  "type": "UiSdlConnected<UiSdlModal>",
+  "component": {
+    "size": "FULLSCREEN",
+    "header": {
+      "text": "Building Details"
+    },
+    "modalType": {
+      "type": "UiSdlOneButtonModal",
+      "primaryButtonLabel": "Close"
+    },
+    "children": [
+      {
+        "id": "SmartBulb.BuildingDetails"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "type": "UiSdlConnected<UiSdlTimeseriesLineBarChart>",
+  "component": {
+    "header": {
+      "title": "Core Features"
+    },
+    "zoomEnabled": false,
+    "showNowLine": true,
+    "hideMissingDataPoints": true,
+    "dataZoom": false,
+    "xAxis": {
+      "type": "UiSdlTimeseriesLineBarChartXAxisConfig",
+      "interval": "DAY",
+      "startDate": "LAST_MONTH",
+      "name": "Month",
+      "nameGap": 30
+    },
+    "yAxis": {
+      "units": true,
+      "name": "Value"
+    },
+    "dataSpec": {
+      "dataType": "City",
+      "yAxisFields": [
+        {
+          "visualizationType": {
+            "type": "UiSdlTimeseriesLineBarChartLineVisualization",
+            "lineStyle": "Solid",
+            "smooth": true,
+            "color": 1
+          },
+          "legendLabel": "Average Voltage",
+          "entityId": "RWC",
+          "metricName": "AverageVoltage"
+        },
+        {
+          "visualizationType": {
+            "type": "UiSdlTimeseriesLineBarChartLineVisualization",
+            "lineStyle": "Solid",
+            "smooth": true,
+            "color": 2
+          },
+          "legendLabel": "Average Lumens",
+          "entityId": "RWC",
+          "metricName": "AverageLumens"
+        },
+        {
+          "visualizationType": {
+            "type": "UiSdlTimeseriesLineBarChartLineVisualization",
+            "lineStyle": "Solid",
+            "smooth": true,
+            "color": 3
+          },
+          "legendLabel": "Average Temperature",
+          "entityId": "RWC",
+          "metricName": "AverageTemperature"
+        }
+      ]
+    }
+  }
+}

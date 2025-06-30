@@ -1,0 +1,12 @@
+/**
+ * LEDBulb entity definition
+ * Represents a light-emitting diode (LED) bulb, extending the SmartBulb type.
+ */
+entity type LEDBulb extends SmartBulb {
+
+  lifeSpanInHours: int = 10000
+
+  efficiencyFactor: double = 0.75
+
+  monthlyBill: ~ js-server
+}

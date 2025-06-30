@@ -1,0 +1,105 @@
+{
+  "type": "UiSdlConnected<UiSdlDataGrid>",
+  "component": {
+    "header": {
+      "title": "Building Metadata"
+    },
+    "paginationConfig": {
+      "pageSize": 10,
+      "pagination": true
+    },
+    "filterBar": true,
+    "searchBarPlaceHolderText": "Search buildings...",
+    "dataSpec": {
+      "dataType": "Building",
+      "columnFields": [
+        {
+          "fieldName": "id",
+          "label": "Building ID",
+          "sortable": true,
+          "searchable": true,
+          "redirectLink": {
+            "internal": true,
+            "href": "/smartBulb/building/{{id}}"
+          }
+        },
+        {
+          "fieldName": "description",
+          "label": "Building Description",
+          "sortable": true
+        },
+        {
+          "fieldName": "apartmentsCount",
+          "label": "Total Apartments",
+          "sortable": true
+        },
+        {
+          "fieldName": "city.id",
+          "label": "City",
+          "sortable": true,
+          "searchable": true
+        },
+        {
+          "fieldName": "averageVoltageStoredCalc",
+          "label": "Average Power Consumed",
+          "sortable": true
+        },
+        {
+          "fieldName": "averageEfficiencyStoredCalc",
+          "label": "Building Efficiency",
+          "sortable": true
+        }
+      ]
+    },
+    "rowActions": [
+      {
+        "type": "UiSdlDataGridRowAction",
+        "name": "View Details",
+        "actionSuffix": "POPUP",
+        "iconSuffix": "eye"
+      }
+
+    ],
+    "tableActions": [
+      {
+        "type": "UiSdlActionGroup",
+        "name": "Update",
+        "iconSuffix": "",
+        "usage": "primary",
+        "actionSuffix": "UPDATE_BUILDING"
+      }
+    ]
+  },
+  "effectTriggers": [
+    {
+      "trigger": "SmartBulb.BuildingMetadataGrid.ROW_ACTION_CLICK_POPUP",
+      "effectType": "UiSdlEpicShowUiSdlModal",
+      "payload": {
+        "modal": "SmartBulb.BuildingModal"
+      },
+      "payloadStrategy": "MERGE"
+    },
+    {
+      "trigger": "SmartBulb.BuildingMetadataGrid.TABLE_ACTION_CLICK_UPDATE_BUILDING",
+      "effectType": "UiSdlEpicShowUiSdlModal",
+      "payload": {
+        "modal": "SmartBulb.UpdateBuildingDetailsModal"
+      },
+      "payloadStrategy": "MERGE"
+    },
+    {
+      "trigger": "SmartBulb.BuildingMetadataGrid.LOADED_DATA_HANDLE",
+      "actions": [
+        {
+          "type": "SmartBulb.SuccessBanner.BANNER_SHOW",
+          "payload": {
+            "componentId": "SmartBulb.SuccessBanner",
+            "primaryText": "Dashboard Updated",
+            "secondaryText": "The dashboard grid is now displaying all updates."
+          },
+          "payloadStrategy": "MERGE"
+        }
+      ]
+    }
+  ]
+}

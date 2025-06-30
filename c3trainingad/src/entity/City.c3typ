@@ -1,0 +1,17 @@
+/**
+  * @file City.c3typ
+ * City entity definition.
+ * City in which the buildings are located.
+  */
+entity type City mixes FeatureEvaluatable {
+
+  // apartments in the building
+  buildings: [Building](city)
+
+  //lattitude of the building
+  latitude: !double
+
+  //longitude of the building
+  longitude: !double
+  
+}

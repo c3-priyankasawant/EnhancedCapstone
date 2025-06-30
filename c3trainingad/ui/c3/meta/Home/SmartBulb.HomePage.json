@@ -1,0 +1,26 @@
+{
+  "type": "UiSdlLayoutNavMenu",
+  "navMenu": {
+    "id": "SmartBulb.NavMenu"
+  },
+  "children": [
+    {
+      "id": "SmartBulb.SuccessBanner"
+    },
+    {
+      "id": "SmartBulb.KpiTilesContainer"
+    },
+    {
+      "id": "SmartBulb.TimeSeriesChartContainer"
+    },
+    {
+      "id": "SmartBulb.BuildingMetadataGrid"
+    },
+    {
+      "id": "SmartBulb.BuildingModal"
+    },
+    {
+      "id": "SmartBulb.UpdateBuildingDetailsModal"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "UiSdlConnected<UiSdlNavMenu>",
+  "component": {
+    "logoImageUrl": "assets/images/menu/logo.svg",
+    "itemSections": [
+      {
+        "items": [
+          {
+            "id": "home",
+            "title": "Home",
+            "icon": "HOME",
+            "redirectRoute": {
+              "urlPath": "/smartbulb/home"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

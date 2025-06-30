@@ -1,0 +1,7 @@
+{
+  "name": "SmartBulbMeasurementSeriesSource",
+  "source": "SourceSmartBulbMeasurementSeries",
+  "sourceSystem": {
+    "name": "Canonical"
+  }
+}

@@ -1,0 +1,14 @@
+@typeScript
+type UiSdlApplicationStateWT mixes UiSdlApplicationState {
+/*
+* Listens for actions of type 'ROW_RECORD_STORE'
+*/
+   @typeScript(env="client")
+   @uiSdlReducer(actionType='ROW_RECORD_STORE')
+   rowRecordStoreReducer: private inline function(state: !UiSdlReduxState, action: UiSdlReduxAction): UiSdlReduxState
+
+   @uiSdlActionCreator(actionType='ROW_RECORD_STORE')
+   @typeScript(env="client")
+   storeRowRecordAction: function(id: string, obj: json): UiSdlReduxAction
+
+}

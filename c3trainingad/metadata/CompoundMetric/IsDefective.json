@@ -1,0 +1,6 @@
+{
+    "name": "IsDefective",
+    "id": "IsDefective",
+    "description": "Determines if a bulb is defective (Status ON and AverageLumens == 0)",
+    "expression": "AverageLumens == 0 && Status >= 1 ? 1 : 0"
+}

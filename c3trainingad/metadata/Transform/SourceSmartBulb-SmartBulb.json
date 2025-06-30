@@ -1,0 +1,12 @@
+{
+  "name": "SourceSmartBulb-SmartBulb",
+  "target": "SmartBulb",
+  "source": "SourceSmartBulb",
+  "projection": {
+    "id": "ID",
+    "bulbType": "BULBTYPE",
+    "wattage": "WATTAGE",
+    "manufacturer": "{id: MANUFACTURER}",
+    "startDate": "STARTDATE"
+  }
+}

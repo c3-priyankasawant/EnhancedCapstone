@@ -1,0 +1,8 @@
+{
+    "id": "AverageVoltage_Building",
+    "name": "AverageVoltage",
+    "description": "Calculates the average voltage of the building based on sensor data.",
+    "srcType": "Building",
+    "path": "apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.voltage))"
+}

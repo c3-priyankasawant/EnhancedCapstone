@@ -1,0 +1,13 @@
+{
+  "type": "UiSdlConnected<UiSdlLayoutNavigation>",
+  "component": {
+    "navigation": {
+      "id": "SmartBulb.NavMenu"
+    },
+    "children": [
+      {
+        "id": "SmartBulb.BuildingDetailContent"
+      }
+    ]
+  }
+}

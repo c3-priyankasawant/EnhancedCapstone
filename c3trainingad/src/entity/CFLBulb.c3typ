@@ -1,0 +1,11 @@
+/**
+ * CFLBulb entity definition
+ * Represents a compact fluorescent light bulb, extending the SmartBulb type.
+ */
+entity type CFLBulb extends SmartBulb {
+
+  lifeSpanInHours: int = 7500
+
+  efficiencyFactor: double = 0.25
+
+}

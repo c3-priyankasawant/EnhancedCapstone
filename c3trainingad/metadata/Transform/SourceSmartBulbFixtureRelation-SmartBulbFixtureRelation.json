@@ -1,0 +1,12 @@
+{
+  "name": "SourceSmartBulbToFixtureRelation-SmartBulbToFixtureRelation",
+  "target": "SmartBulbToFixtureRelation",
+  "source": "SourceSmartBulbToFixtureRelation",
+  "projection": {
+    "id": "ID",  
+    "from": "{ id: FROM }", 
+    "to": "{ id: TO }",                 
+    "start": "START",                       
+    "end": "END"                              
+  }
+}

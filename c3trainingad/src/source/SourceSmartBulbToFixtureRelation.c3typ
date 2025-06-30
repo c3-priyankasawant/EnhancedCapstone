@@ -1,0 +1,7 @@
+type SourceSmartBulbToFixtureRelation mixes Source {
+  ID: string
+  FROM: string
+  TO: string
+  START: datetime
+  END: datetime
+}

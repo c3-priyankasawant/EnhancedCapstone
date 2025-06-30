@@ -1,0 +1,41 @@
+{
+  "type": "UiSdlConnected<UiSdlDefinitionList>",
+  "component": {
+    "dataSpec": {
+      "dataType": "Building",
+      "contextVars": {
+        "buildingId": {
+          "type": "UiSdlPageParam",
+          "path": "buildingId"
+        }
+      },
+      "entityId": "${buildingId}",
+      "fields": [
+        {
+          "label": "Building ID",
+          "fieldName": "id"
+        },
+        {
+          "label": "Description",
+          "fieldName": "description"
+        },
+        {
+          "label": "Apartments Count",
+          "fieldName": "apartmentsCount"
+        },
+        {
+          "label": "City",
+          "fieldName": "city.id"
+        },
+        {
+          "label": "Average Voltage",
+          "fieldName": "averageVoltageStoredCalc"
+        },
+        {
+          "label": "Average Efficiency",
+          "fieldName": "averageEfficiencyStoredCalc"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "UiSdlConnected<UiSdlModal>",
+  "component": {
+    "size": "MEDIUM",
+    "header": {
+      "text": "Update Building Details"
+    },
+    "modalType": {
+      "type": "UiSdlOneButtonModal",
+      "primaryButtonLabel": "Close"
+    },
+    "children": [
+      {
+        "id": "SmartBulb.UpdateBuildingDetails"
+      },
+      {
+        "id": "SmartBulb.SuccessBanner"
+      }
+    ]
+  }
+}

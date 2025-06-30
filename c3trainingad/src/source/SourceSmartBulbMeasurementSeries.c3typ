@@ -1,0 +1,4 @@
+type SourceSmartBulbMeasurementSeries mixes Source {
+  smartBulb: string
+  smartid: string
+}

@@ -1,0 +1,48 @@
+
+/**
+  * @file Building.c3typ
+ * Building entity definition.
+ * Represents a physical structure that contains various apartments and fixtures.
+ * This entity can be used to manage and track the properties of a building.
+ */
+entity type Building mixes FeatureEvaluatable {
+
+  //City where the building is located.
+  city: !City
+
+  description: string
+
+  // apartments in the building
+  apartments: [Apartment](building)
+
+  //lattitude of the building
+  latitude: !double
+
+  //longitude of the building
+  longitude: !double
+
+  apartmentsCount: int stored calc count(apartments)
+
+
+  averageVoltage: member function(): double js-server 
+
+  averageTemperature: member function(): double js-server 
+
+  averageLumens: member function(): double js-server 
+
+  averageVoltageStoredCalc: double stored calc averagePowerForBuilding(id)
+
+  averagePower: member function(): double js-server
+
+  averageEfficiency: member function(): double js-server 
+
+  averageEfficiencyStoredCalc: double stored calc averageEfficiencyForBuilding(id)
+
+
+
+  averagePowerForCity: function(city: string): double js-server
+
+
+  fetchBuildingsWithAverages: function(spec: FetchSpec): FetchResult<Building> js-server
+  
+}

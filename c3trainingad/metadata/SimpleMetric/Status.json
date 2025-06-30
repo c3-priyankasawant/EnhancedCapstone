@@ -1,0 +1,8 @@
+{
+    "id": "Status_SmartBulb",
+    "name": "Status",
+    "description": "Indicates the current status of the smart bulb, such as whether it is on or off.",
+    "srcType": "SmartBulb",
+    "path": "bulbMeasurements",
+    "expression": "max(max(normalized.data.status))"
+}

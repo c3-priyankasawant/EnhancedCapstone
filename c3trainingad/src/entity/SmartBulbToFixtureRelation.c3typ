@@ -1,0 +1,7 @@
+/**
+ * SmartBulbToFixtureRelationship.c3type
+ * Description: This type represents the timed interval relationship between a {@link SmartBulb} and a {@link Fixture}.
+ */
+
+@db(index=['to', 'from'])
+entity type SmartBulbToFixtureRelation mixes TimedIntervalRelation<SmartBulb, Fixture>

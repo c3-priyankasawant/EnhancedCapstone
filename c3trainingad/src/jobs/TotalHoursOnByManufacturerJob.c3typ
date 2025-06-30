@@ -1,0 +1,19 @@
+/**
+* TotalHoursOnByManufacturerJob.c3typ
+*/
+type TotalHoursOnByManufacturerJob extends MapReduce<SmartBulb, string, double, double> type key 'TOTALHOURSONBYMANUFACTURERJOB' {
+
+  // Map function - overriden from MapReduce
+  map:       ~ js-server 
+
+  // Reduce function - overridden from MapReduce
+  reduce:    ~ js-server
+
+  startDate: string
+
+  endDate: string
+  
+  interval: string
+
+
+}

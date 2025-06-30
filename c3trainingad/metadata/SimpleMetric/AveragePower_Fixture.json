@@ -1,0 +1,8 @@
+{
+    "id": "AveragePower_Fixture",
+    "name": "AveragePower",
+    "description": "Calculates the average power of smart bulbs in a fixture.",
+    "srcType": "Fixture",
+    "path": "bulbHistory.from.bulbMeasurements",
+    "expression": "sum(sum(normalized.data.power))"
+}

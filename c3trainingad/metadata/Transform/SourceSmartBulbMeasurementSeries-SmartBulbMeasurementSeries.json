@@ -1,0 +1,9 @@
+{
+  "name": "SourceSmartBulbMeasurementSeries-SmartBulbMeasurementSeries",
+  "target": "SmartBulbMeasurementSeries",
+  "source": "SourceSmartBulbMeasurementSeries",
+  "projection": {
+    "smartBulb": "{ id: smartBulb }",
+    "id": "smartid"
+  }
+}

@@ -1,0 +1,3 @@
+type CityRateConfig mixes Config {
+  rateByCity: map<string, double>
+}

@@ -1,0 +1,10 @@
+/**
+ * Fill in type description here.
+ */
+type Utility mixes ExpressionEngineFunction {
+
+  /**
+   * Fill in field description here.
+   */
+  convertToDateTimeFormat: member function(timestamp: string): datetime js-server
+}

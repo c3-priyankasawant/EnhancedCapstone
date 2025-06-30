@@ -1,0 +1,12 @@
+/*
+SmartBulbIncrementalDataBatchJob.c3typ
+*/
+type SmartBulbIncrementalDataBatchJob extends BatchJob<SmartBulbIncrementalDataBatchJob, SmartBulbIncrementalDataBatchJobOptions, SmartBulbIncrementalDataBatch> type key "SBIDBJ" {
+  
+  startJob: function(options: !?SmartBulbIncrementalDataBatchJobOptions): !SmartBulbIncrementalDataBatchJob js-server
+
+  doStart:      ~ js-server
+  processBatch: ~ js-server
+  allComplete: ~ js-server
+
+}

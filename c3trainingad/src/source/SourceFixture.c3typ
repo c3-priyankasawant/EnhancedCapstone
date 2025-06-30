@@ -1,0 +1,7 @@
+type SourceFixture mixes Source {
+  id: !string
+  apartment: string
+  // city: string
+  // location: string
+  // installed: string
+}

@@ -1,0 +1,10 @@
+type SourceSmartBulbMeasurement mixes Source {
+  timestamp: datetime
+  end: datetime
+  SN: string
+  Status: int
+  Watts: double
+  Lumens: double
+  Voltage: double
+  Temp: double
+}

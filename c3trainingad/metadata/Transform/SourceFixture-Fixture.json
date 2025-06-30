@@ -1,0 +1,9 @@
+{
+  "name": "SourceFixture-Fixture",
+  "target": "Fixture",
+  "source": "SourceFixture",
+  "projection": {
+    "id":"id",
+    "apartment": "{id:apartment}"
+  }
+} 

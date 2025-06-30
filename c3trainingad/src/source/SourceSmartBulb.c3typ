@@ -1,0 +1,10 @@
+/**
+ * Fill in type description here.
+ */
+type SourceSmartBulb mixes Source{
+  ID: string
+  BULBTYPE: string
+  WATTAGE: decimal
+  MANUFACTURER: string
+  STARTDATE: datetime
+}

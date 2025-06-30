@@ -1,0 +1,31 @@
+/**
+ * SmartBulbMeasurement.c3typ
+ * A measurement of a {@link SmartBulb} that is taken at regular intervals.
+ */
+
+@db(datastore='kv',
+partitionKeyField='parent',
+persistenceOrder='start')
+entity type SmartBulbMeasurement mixes IntervalDataPoint<SmartBulbMeasurementSeries> {
+
+  // status of the bulb
+  @ts(treatment='previous')
+  status: int
+
+  // power consumption in watts
+  @ts(treatment='sum')
+  power: double
+
+  // lumens emitted by the bulb
+  @ts(treatment='avg')
+  lumens: double
+
+  // voltage of the bulb
+  @ts(treatment='avg')
+  voltage: double
+
+  //temperature of the bulb in degrees Celsius
+  @ts(treatment='avg')
+  temperature: double
+
+}

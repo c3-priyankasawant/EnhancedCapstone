@@ -1,0 +1,7 @@
+{
+  "name": "SmartBulbToFixtureRelationSource",
+  "source": "SourceSmartBulbToFixtureRelation",
+  "sourceSystem": {
+    "name": "Canonical"
+  }
+}

@@ -1,0 +1,15 @@
+/**
+  * @file Apartment.c3typ
+ * a single building with many {@link Apartment}s
+ * An apartment  a {@link Entity} that represents a residential unit within a building.
+ * It contains various fields that describe the apartment's characteristics.
+ */
+
+entity type Apartment {
+  // building this apartment is in
+  building: !Building
+
+  // Fixtures in the apartment
+  fixtures: [Fixture](apartment)
+
+}

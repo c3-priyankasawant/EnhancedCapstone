@@ -1,0 +1,5 @@
+targetModuleName,targetPageName,name,urlPath
+SmartBulb,HomePage,/,/
+SmartBulb,HomePage,/smartbulb/home,/smartbulb/home
+SmartBulb,BuildingDetails,/smartBulb/building/{{buildingId}},/smartBulb/building/{{buildingId}}
+

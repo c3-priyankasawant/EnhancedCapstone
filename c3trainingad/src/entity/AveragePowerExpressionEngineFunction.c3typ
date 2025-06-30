@@ -1,0 +1,14 @@
+type AveragePowerExpressionEngineFunction mixes ExpressionEngineFunction {
+
+  /**
+   * Calculates the average power for a SmartBulb within a specified time range.
+   *
+   * @param obj - The instance of the object (e.g., SmartBulb) for which to calculate the average power.
+   * @param spec - EvalMetricsSpec containing the time range and other options.
+   * @return The average power as a double.
+   */
+  averagePowerForBuilding: function(id: string): double js-server
+
+  averageEfficiencyForBuilding: function(id: string): double js-server
+  
+}

@@ -1,0 +1,19 @@
+/**
+  * @file Fixture.c3typ
+ * A light fixture that a single {@link SmartBulb} may be connected to
+ */
+
+entity type Fixture mixes FeatureEvaluatable {
+
+  // aprtment this fixture is needed in
+  apartment: Apartment
+
+  // bulbHitory
+  @db(order='descending(start)')
+  bulbHistory: [SmartBulbToFixtureRelation](to)
+
+  // current bulb in the fixture
+  currentBulb: SmartBulb stored calc bulbHistory[0].(end == null).from
+
+  installedDate: datetime
+}

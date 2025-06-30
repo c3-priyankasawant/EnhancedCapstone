@@ -1,0 +1,34 @@
+{
+  "type": "UiSdlConnected<UiSdlMetricTile>",
+  "component": {
+    "header": {
+      "title": "Average Efficiency"
+    },
+    "noTimeZoneConversion": true,
+    "showSparkline": true,
+    "dataSpec": {
+      "dataType": "City",
+      "historicSparkline": {
+        "metricName": "AverageEfficiency",
+        "evaluateAction": "EVAL",
+        "interval": "HOUR",
+        "timeHorizon": "1MONTH",
+        "entityId" : "RWC",
+        "name": "Lumens/Watts",
+        "unit": {
+          "id": "dimensionless"
+        },
+        "color": "#008000"
+      },
+      "kpiTrendComparison": {
+        "percentage": true,
+        "intervalLength": 1,
+        "interval": "DAY",
+        "precision": 2,
+        "metricName": "AverageEfficiency",
+        "entityId": "RWC"
+      }
+    }
+  }
+}
+

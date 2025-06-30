@@ -1,0 +1,13 @@
+{
+    "id": "AverageTemperature_City",
+    "name": "AverageTemperature",
+    "description": "Calculates the average lumens of the city based on sensor data.",
+    "srcType": "City",
+    "path": "buildings.apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.temperature))",
+    "cache": {
+        "intervals": ["MONTH"],
+        "monthsInPast": 1,
+        "monthsInFuture": 1
+    }
+}

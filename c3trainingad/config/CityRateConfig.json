@@ -1,0 +1,7 @@
+{
+    "rateByCity": {
+        "New York": 0.15,
+        "London": 0.12,
+        "Tokyo": 0.18
+    }
+}

@@ -1,0 +1,11 @@
+/**
+ * SmartBulbMeasurementSeries.c3typ
+ * A series of measurements for a {@link SmartBulb} that are taken at regular intervals.
+ */
+
+
+entity type SmartBulbMeasurementSeries mixes IntervalDataHeader<SmartBulbMeasurement> {
+
+  smartBulb: SmartBulb
+
+}

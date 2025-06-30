@@ -1,0 +1,7 @@
+/**
+ * Fill in type description here.
+ */
+type SmartBulbIncrementalDataBatch {
+
+  files: ![File]
+}

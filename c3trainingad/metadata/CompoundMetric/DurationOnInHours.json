@@ -1,0 +1,6 @@
+{
+    "id": "DurationOnInHours",
+    "name": "DurationOnInHours",
+    "description": "The total duration the smart bulb has been on, measured in hours.",
+    "expression": "rolling('SUM', sum(eval('HOUR', Status)))"
+}

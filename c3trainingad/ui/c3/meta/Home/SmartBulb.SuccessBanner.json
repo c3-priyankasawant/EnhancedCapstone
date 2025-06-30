@@ -1,0 +1,9 @@
+{
+  "type": "UiSdlConnected<UiSdlMessageContainer>",
+  "component": {
+    "id": "SmartBulb.SuccessBanner",
+    "bannerType": "SUCCESS",
+    "primaryText": "Building details updated successfully",
+    "animation": "FROM_TOP"
+  }
+}

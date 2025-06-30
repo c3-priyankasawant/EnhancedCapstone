@@ -1,0 +1,12 @@
+/**
+ * INCANBulb entity definition
+ * Represents an incandescent light bulb, extending the SmartBulb type.
+ */
+entity type INCANBulb extends SmartBulb {
+
+  lifeSpanInHours: int = 5000
+
+  efficiencyFactor: double = 0.45
+
+  monthlyBill: ~ js-server
+}

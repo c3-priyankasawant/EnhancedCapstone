@@ -1,0 +1,9 @@
+{
+  "name": "c3trainingad",
+  "description": "Energy Management for Lightbulbs",
+  "author": "C3 Training",
+  "version": "8.5.0",
+  "dependencies": {
+    "uiComponentLibraryReact": "8.5"
+  }
+}

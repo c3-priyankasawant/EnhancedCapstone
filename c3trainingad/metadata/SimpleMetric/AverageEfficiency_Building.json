@@ -1,0 +1,8 @@
+{
+    "id": "AverageEfficiency_Building",
+    "name": "AverageEfficiency",
+    "description": "Calculates the average Efficiency of smart bulbs in a building.",
+    "srcType": "Building",
+    "path": "apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.lumens) / avg(normalized.data.power))"
+}

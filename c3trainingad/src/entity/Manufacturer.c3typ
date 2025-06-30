@@ -1,0 +1,18 @@
+/** 
+* Manufacturer.c3typ
+* A single {@link Manufacturer}.
+*/
+
+entity type Manufacturer{
+
+    // The name of the manufacturer
+    fullName: !string
+
+    // The region where the manufacturer is located
+    region: string
+
+
+    // The bulb the manufacturer produces
+    smartBulb: [SmartBulb](manufacturer)
+
+}

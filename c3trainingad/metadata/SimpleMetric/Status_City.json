@@ -1,0 +1,7 @@
+{
+  "id": "Status_City",
+  "name": "Status",
+  "srcType": "City",
+  "path": "buildings.apartments.fixtures.bulbHistory.from.bulbMeasurements",
+  "expression": "sum(max(normalized.data.status))"
+}

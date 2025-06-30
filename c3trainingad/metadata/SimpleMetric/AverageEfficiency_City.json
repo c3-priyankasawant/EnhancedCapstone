@@ -1,0 +1,13 @@
+{
+    "id": "AverageEfficiency_City",
+    "name": "AverageEfficiency",
+    "description": "Calculates the average efficiency of the city based on sensor data.",
+    "srcType": "City",
+    "path": "buildings.apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.lumens) / avg(normalized.data.power))",
+    "cache": {
+        "intervals": ["MONTH"],
+        "monthsInPast": 1,
+        "monthsInFuture": 1
+    }
+}

@@ -1,0 +1,17 @@
+/**
+  * @file TotalHoursOnByManufacturer.c3typ
+ * A job that calculates the total hours a {@link SmartBulb} has been on by manufacturer.
+ */
+
+
+entity type TotalHoursOnByManufacturer {
+
+  manufacturer: !string
+
+  start: !datetime
+
+  end: !datetime
+
+  totalHours: !double
+  
+}

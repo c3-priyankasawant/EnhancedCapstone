@@ -1,0 +1,34 @@
+{
+  "type": "UiSdlConnected<UiSdlMetricTile>",
+  "component": {
+    "header": {
+      "title": "Defective Bulb Count"
+    },
+    "noTimeZoneConversion": true,
+    "showSparkline": true,
+    "dataSpec": {
+      "dataType": "City",
+      "historicSparkline": {
+        "metricName": "DefectiveBulbCount",
+        "evaluateAction": "EVAL",
+        "interval": "HOUR",
+        "timeHorizon": "1MONTH",
+        "entityId" : "RWC",
+        "name": "No of Bulbs",
+        "unit": {
+          "id": "dimensionless"
+        },
+        "color": "#FF5271"
+      },
+      "kpiTrendComparison": {
+        "percentage": true,
+        "intervalLength": 7,
+        "interval": "HOUR",
+        "precision": 2,
+        "metricName": "DefectiveBulbCount",
+        "entityId": "RWC"
+      }
+    }
+  }
+}
+

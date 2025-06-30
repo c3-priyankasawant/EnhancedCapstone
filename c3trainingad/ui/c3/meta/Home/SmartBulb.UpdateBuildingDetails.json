@@ -1,0 +1,74 @@
+{
+  "type": "UiSdlConnected<UiSdlForm>",
+  "component": {
+    "hideFooterButtons": false,
+    "submitButtonText": "Update",
+    "dataSpec": {
+      "fieldSets": {
+        "type": "[UiSdlFormFieldSet]",
+        "value": [
+          {
+            "type": "UiSdlFormFieldSet",
+            "fields": [
+              {
+                "inputElement": {
+                  "type": "UiSdlSelectInput",
+                  "dataSpec": {
+                    "dataType": "Building",
+                    "actionName": "fetch",
+                    "args": {
+                      "spec": {
+                        "include": "id"
+                      }
+                    },
+                    "dataPath": "objs",
+                    "valueField": "id",
+                    "displayField": "id"
+                  }
+                },
+                "fieldName": "buildingId",
+                "label": "Select Building",
+                "required": true,
+                "key": "buildingId"
+              },
+              {
+                "inputElement": {
+                  "type": "UiSdlTextInput"
+                },
+                "fieldName": "description",
+                "label": "Description",
+                "required": true,
+                "key": "description"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "effectTriggers": [
+    {
+      "trigger": "SmartBulb.UpdateBuildingDetails.FORM_SUBMIT",
+      "effectType": "UiSdlEpicSaveBuildingDescription",
+      "payloadStrategy": "MERGE",
+      "payload": {
+        "formId": "SmartBulb.UpdateBuildingDetails",
+        "modalId": "SmartBulb.UpdateBuildingDetailsModal",
+        "dataSourceId": "SmartBulb.BuildingMetadataGrid_dataSpec_ds"
+      }
+    },
+    {
+      "trigger": "SmartBulb.UpdateBuildingDetails.BUILDING_UPDATE_SUCCESS",
+      "actions": [
+        {
+          "type": "SmartBulb.SuccessBanner.BANNER_SHOW",
+            "payload": {
+            "componentId": "SmartBulb.SuccessBanner",
+            "primaryText": "Building Updated successfully"
+          },
+          "payloadStrategy": "MERGE"
+        }
+      ]
+    }
+  ]
+}

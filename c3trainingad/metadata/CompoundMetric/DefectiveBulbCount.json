@@ -1,0 +1,6 @@
+{
+  "id": "DefectiveBulbCount",
+  "name": "DefectiveBulbCount",
+  "description": "Total count of defective SmartBulbs in a city.",
+  "expression": "rolling('SUM', IsDefective)"
+}

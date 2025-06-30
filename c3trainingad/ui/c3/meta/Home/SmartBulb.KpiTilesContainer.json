@@ -1,0 +1,18 @@
+{
+    "type" : "UiSdlConnected<UiSdlContainer>",
+    "component" : {
+      "title" : "Metric Tiles Types - Trend Indicator",
+      "orientation" : "HORIZONTAL",
+      "children" : [ 
+        {
+          "id": "SmartBulb.AveragePowerTile"
+        },
+        {
+          "id": "SmartBulb.AverageEfficiencyTile"
+        },
+        {
+          "id": "SmartBulb.DefectiveBulbCountTile"
+        }
+      ]
+    }
+}
